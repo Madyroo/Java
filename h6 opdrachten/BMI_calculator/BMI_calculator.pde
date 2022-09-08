@@ -16,16 +16,12 @@ rect(20,80,100,30);
 rect(20,140,100,30);
 rect(100,200,100,30);
 
-
 fill(0,0,0);
 text("Gewicht = " + Gewicht + " KG",30,40);
 text("leeftijd = "  + leeftijd + " jaar",30,100);
 text("lengte = " + lengte + " Meter",30,160);
 textSize(15);
 text("Quick maths!", 110,220);
-
-
-
 
 if(leeftijd < 70){
 if(BMI < 18.5){
