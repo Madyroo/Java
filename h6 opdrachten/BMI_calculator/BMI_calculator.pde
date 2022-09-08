@@ -1,13 +1,12 @@
 float Gewicht = 72.5;
 float lengte = 1.80;
-float leeftijd = 20;
+int leeftijd = 20;
 float BMI = 0;
 
 BMI = Gewicht / (lengte * lengte);
 BMI *= 10;
 BMI = round (BMI);
 BMI /= 10;
-println(BMI);
 
 size (300, 300);
 background(255,255,255);
@@ -18,9 +17,9 @@ rect(20,140,100,30);
 
 
 fill(0,0,0);
-text("Gewicht = " + Gewicht + "KG",30,40);
-text("leeftijd ="  + leeftijd + "jaar",30,100);
-text("lengte = " + lengte + "Meter",30,160);
+text("Gewicht = " + Gewicht + " KG",30,40);
+text("leeftijd = "  + leeftijd + " jaar",30,100);
+text("lengte = " + lengte + " Meter",30,160);
 
 
 
