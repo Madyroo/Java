@@ -8,18 +8,21 @@ BMI *= 10;
 BMI = round (BMI);
 BMI /= 10;
 
-size (300, 300);
+size (300, 250);
 background(255,255,255);
 
 rect(20,20,100,30);
 rect(20,80,100,30);
 rect(20,140,100,30);
+rect(100,200,100,30);
 
 
 fill(0,0,0);
 text("Gewicht = " + Gewicht + " KG",30,40);
 text("leeftijd = "  + leeftijd + " jaar",30,100);
 text("lengte = " + lengte + " Meter",30,160);
+textSize(15);
+text("Quick maths!", 110,220);
 
 
 
@@ -47,8 +50,8 @@ if(BMI < 22){
   }   
 } 
 
-textSize(20);
-text("BMI:  = " + BMI ,160,100);
+textSize(25);
+text("BMI:  = " + BMI ,160,105);
 
 
 
