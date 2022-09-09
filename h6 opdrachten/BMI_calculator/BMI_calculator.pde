@@ -1,6 +1,6 @@
-float Gewicht = 72.5;
-float lengte = 1.80;
-int leeftijd = 20;
+float Gewicht = 97;
+float lengte = 1.70;
+int leeftijd = 13;
 float BMI = 0;
 
 BMI = Gewicht / (lengte * lengte);
@@ -28,7 +28,9 @@ if(BMI < 18.5){
   fill(255,255,0);
   }else if (BMI < 25) {
   fill(0,255,0);
-  }else if (BMI <30) {
+  }else if (BMI < 30) {
+  fill(255,0,0);
+    }else if (BMI < 35) {
   fill(255,0,0);
   }else{
   
