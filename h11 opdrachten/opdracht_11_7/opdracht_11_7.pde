@@ -36,9 +36,8 @@ void draw (){
     text("Mad goeie design",107,40);
     text("Aantal Namen:" + " " +  totaal,110, 220);
     if(totaal > 9){
-      println("Howdy Cowboy");
       for(int i = 0; i < 10; i++){
-        println(namen[i]);
+        text(namen[i],50 - 30,i * 20 + 50);
         
       }
     }
@@ -49,7 +48,6 @@ if(totaal <= 9){
   namen[totaal] = text.getText();
 }
 totaal++;
-println(totaal);
   
 }
 void updateScreen(){
