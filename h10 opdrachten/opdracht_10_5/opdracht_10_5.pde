@@ -11,7 +11,7 @@ int totaal = 0;
 
 void setup(){
   size(280,280);
-  background(217,217,214);
+  background(255);
   cp = new ControlP5(this);
 
   
