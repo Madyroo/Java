@@ -43,5 +43,5 @@ void Knop1(){
   float f = float(text.getText());
 f *= 1.21 ;
 
-text("De Prijs inclusief BTW is:" + " " + (f) + text.getText(),100,190);
+text("De Prijs inclusief BTW is: €" + " " + (f) + text.getText(),100,190);
 }
