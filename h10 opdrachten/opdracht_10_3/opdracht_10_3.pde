@@ -19,7 +19,7 @@ void setup(){
                 .addTextfield("TextInput1")
                 .setPosition(60,100)
                 .setText("Type Hier Prijs exclusief BTW")
-                .setCaptionLabel("Made By Jurelor")
+                .setCaptionLabel("Made By Jurelo")
                 .setColorLabel(color(255,0,0));
                 text.setAutoClear(false);
                 
