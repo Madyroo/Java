@@ -10,7 +10,7 @@ void setup(){
   
   cp = new ControlP5(this);
   
-  TF1 = cp.addTextfield("TextField1").setText("Type hier je text").setSize(100,100).setPosition(100,100).setCaptionLabel("Type een naam").setAutoClear(false);
+  TF1 = cp.addTextfield("TextField1").setText("Type hier je text").setSize(100,100).setPosition(80,80).setCaptionLabel("Type een naam").setAutoClear(false);
   knop1 = cp.addButton("Knop1").setCaptionLabel("Update Antwoord").setSize(100,40).setPosition(100,220);
   
 }
