@@ -74,8 +74,8 @@ void Game() {
   stroke(3);
   strokeWeight(3);
   fill(0, 0, 255);
-  rect(p2x * 50, p2y * 50, 50, 50);
-  tegels[((colW * p2y) + p2x)] = 2;
+  rect((int)p2x * 50, p2y * 50, 50, 50);
+  tegels[((colW * p2y) + (int)p2x)] = 2;
 }
 
 void MovePlayerOne() {
@@ -83,7 +83,7 @@ void MovePlayerOne() {
 
 void MovePlayerTwo() {
   if (dirP2 == 3) {
-    p2x -= 1;
+    p2x -= 0.1;
     
   }
 }

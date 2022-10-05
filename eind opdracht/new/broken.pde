@@ -7,7 +7,7 @@ int dirP1 = 0;
 int dirP2 = 0;
 int p1x = 0;
 int p1y = 0;
-int p2x;
+float p2x;
 int p2y;
 
 int counter ;
@@ -54,7 +54,7 @@ void MainMenu(){
 void timer(){
 
   sec =  millis()/1000;
-  aftellen = 100 - sec;
+  aftellen = 1 - sec;
 
    text("Seconde " + aftellen,1500,500);
    
