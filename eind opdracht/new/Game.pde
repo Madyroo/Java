@@ -10,6 +10,8 @@ int GetAmountOfTiles(int type) {
 }
 
 void GameSetup() {
+  knop1.hide();
+  knop2.hide();
   frameRate(30);
   reset = false;
 
@@ -84,7 +86,6 @@ void MovePlayerOne() {
 void MovePlayerTwo() {
   if (dirP2 == 3) {
     p2x -= 0.1;
-    
   }
 }
 
