@@ -1,3 +1,5 @@
+import processing.video.*;
+PImage img;
 
 int GetAmountOfTiles(int type) {
   int aantal = 0;
@@ -40,7 +42,11 @@ void Game() {
   timer();
   MovePlayerTwo();
   MovePlayerOne();
-
+  
+  img = loadImage("Tate.png");
+  
+//  formule vakkjes
+image(img, 1100, 500);
   strokeWeight(1);
   fill(255);
   int row = 0;
@@ -57,10 +63,11 @@ void Game() {
     rect((i%colW)*50, row*50, 50, 50);
   }
 
-  //score
+  //score bord
   line(1000, 180, 1750, 180);
   fill(0, 0, 0);
   textSize(50);
+  textAlign(BASELINE,BASELINE);
   text("player Rood: " + GetAmountOfTiles(1), 1000, 175);
   text("player Blauw: " + GetAmountOfTiles(2), 1400, 175);
   text("score", 1270, 100);
@@ -84,10 +91,10 @@ void MovePlayerOne() {
 }
 
 void MovePlayerTwo() {
-  if (dirP2 == 3) {
-    p2x -= 0.1;
+
+    
   }
-}
+
 
 void GameControl() {
 
@@ -104,8 +111,8 @@ void GameControl() {
 
   //blauw
   if (keyCode == 65 && p2x > 0) {
-    //p2x -= 1;
-    dirP2 = 3;
+    p2x -= 1;
+    //dirP2 = 3;
   } else if (keyCode == 87 && p2y > 0) {
     p2y -= 1;
   } else if (keyCode == 68 && p2x < (colW - 1)) {

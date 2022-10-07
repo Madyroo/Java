@@ -1,10 +1,7 @@
-
 int colW;
 int maxAantal;
 int[] tegels;
 
-int dirP1 = 0;
-int dirP2 = 0;
 int p1x = 0;
 int p1y = 0;
 float p2x;
@@ -27,13 +24,14 @@ import controlP5.*;
 
 ControlP5 cp;
 
+Movie myMovie;
+
 Button knop1;
 Button knop2;
 
 void setup() {
   fullScreen();
   frameRate(5);
-
   
   
    cp = new ControlP5(this);
@@ -48,8 +46,9 @@ void setup() {
   sec =  millis()/1000;
   startTijd = sec + 30;
 }
-
-void draw() {
+// Game menu's switcher
+void draw() {  
+  
   if (gameState == 0) {
    MainMenu();
     
@@ -78,7 +77,8 @@ void timer() {
   sec =  millis()/1000;
   aftellen = startTijd - sec;
 
-  text("Seconde " + aftellen, 1250, 500);
+fill(0);
+  text("Seconde " + aftellen, 1250, 300);
 
   if (aftellen <= 0) {
     gameState = 2;
