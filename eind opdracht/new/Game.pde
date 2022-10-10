@@ -14,7 +14,7 @@ int GetAmountOfTiles(int type) {
 void GameSetup() {
   knop1.hide();
   knop2.hide();
-  frameRate(30);
+  frameRate(60);
   reset = false;
 
   font = createFont("Press Start 2P", 50);
@@ -42,7 +42,7 @@ void Game() {
   timer();
   MovePlayerTwo();
   MovePlayerOne();
-  
+  imageMode(BASELINE);
   img = loadImage("Tate.png");
   
 //  formule vakkjes

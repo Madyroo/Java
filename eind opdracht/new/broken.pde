@@ -28,6 +28,7 @@ Movie myMovie;
 
 Button knop1;
 Button knop2;
+Button knop3;
 
 void setup() {
   fullScreen();
@@ -36,12 +37,16 @@ void setup() {
   
    cp = new ControlP5(this);
 
-  knop1 = cp.addButton("Knop1").setPosition(colW + 850, 400).setSize(200, 100).setCaptionLabel("Try Again!");
+  knop1 = cp.addButton("Knop1").setPosition(colW + 1000, 400).setSize(200, 100).setCaptionLabel("Try Again!");
   knop1.hide();
   cp.getController("Knop1").setColorForeground(color(255, 0, 0));
   
   knop2 = cp.addButton("Knop2").setPosition(colW + 850, 400).setSize(200, 100).setCaptionLabel("Play game!");
   cp.getController("Knop2").setColorForeground(color(255, 0, 0));
+  
+  knop3 = cp.addButton("Knop3").setPosition(colW + 750, 400).setSize(200, 100).setCaptionLabel("Return To home Screen");
+  knop3.hide();
+  cp.getController("Knop3").setColorForeground(color(255, 0, 0));
 
   sec =  millis()/1000;
   startTijd = sec + 30;
