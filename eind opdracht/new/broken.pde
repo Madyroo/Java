@@ -19,6 +19,8 @@ int AantalRood = 0;
 int AantalBlauw = 0;
 int theMode = 0;
 
+PFont font;
+
 
 import controlP5.*;
 
@@ -34,6 +36,7 @@ void setup() {
   fullScreen();
   frameRate(5);
   
+   font = createFont("Press Start 2P", 50);
   
    cp = new ControlP5(this);
 

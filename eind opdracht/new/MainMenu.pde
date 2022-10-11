@@ -1,6 +1,6 @@
 
 void MainMenu() {
-  background(0,0,180);
+  background(0,0,0);
     fill(150,0,0);
   textSize(80);
   int r = floor(random(256));
@@ -9,8 +9,11 @@ void MainMenu() {
   fill(r,g,b);
   textAlign(CENTER,CENTER);
   text("The Top G Game", width /2, height /2 -250);
+  textFont(font);
   
   knop2.show();
+  knop1.hide();
+  knop3.hide();
   
   img = loadImage("smoke.jpg");
   imageMode(CENTER);

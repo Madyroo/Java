@@ -14,10 +14,10 @@ int GetAmountOfTiles(int type) {
 void GameSetup() {
   knop1.hide();
   knop2.hide();
+  knop3.hide();
   frameRate(60);
   reset = false;
 
-  font = createFont("Press Start 2P", 50);
 
   int row = 0;
   colW = (width/50) / 2;
@@ -68,6 +68,7 @@ image(img, 1100, 500);
   fill(0, 0, 0);
   textSize(50);
   textAlign(BASELINE,BASELINE);
+  textSize(20);
   text("player Rood: " + GetAmountOfTiles(1), 1000, 175);
   text("player Blauw: " + GetAmountOfTiles(2), 1400, 175);
   text("score", 1270, 100);
@@ -99,25 +100,25 @@ void MovePlayerTwo() {
 void GameControl() {
 
   //rood
-  if (keyCode == 37 && p1x > 0) {
+  if (keyCode == 65 && p1x > 0) {
     p1x -= 1;
-  } else if (keyCode == 38 && p1y > 0) {
+  } else if (keyCode == 87 && p1y > 0) {
     p1y -= 1;
-  } else if (keyCode == 39 && p1x < (colW - 1)) {
+  } else if (keyCode == 68 && p1x < (colW - 1)) {
     p1x += 1;
-  } else if (keyCode == 40 && p1y < (maxAantal / colW) - 1) {
+  } else if (keyCode == 83 && p1y < (maxAantal / colW) - 1) {
     p1y += 1;
   }
 
   //blauw
-  if (keyCode == 65 && p2x > 0) {
+  if (keyCode == 37 && p2x > 0) {
     p2x -= 1;
     //dirP2 = 3;
-  } else if (keyCode == 87 && p2y > 0) {
+  } else if (keyCode == 38 && p2y > 0) {
     p2y -= 1;
-  } else if (keyCode == 68 && p2x < (colW - 1)) {
+  } else if (keyCode == 39 && p2x < (colW - 1)) {
     p2x += 1;
-  } else if (keyCode == 83 && p2y < (maxAantal / colW) - 1) {
+  } else if (keyCode == 40 && p2y < (maxAantal / colW) - 1) {
     p2y += 1;
   }
 }

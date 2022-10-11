@@ -1,4 +1,4 @@
-PFont font;
+
 
 void GameOver() {
   background(0);
@@ -10,6 +10,14 @@ void GameOver() {
   textAlign(CENTER,CENTER);
   text("GAME OVER", width /2, height /2 -250);
   textFont(font);
+  
+    img = loadImage("cigar.jpg");
+  imageMode(CENTER);
+  image(img, width / 2 , height /2 +450 );
+  
+    img = loadImage("dance.jpg");
+  imageMode(CENTER);
+  image(img, width / 2 , height /2 -250 );
   
   
   int r = floor(random(256));
@@ -27,6 +35,10 @@ void Knop1() {
   reset = true;
   gameState = 1;
   startTijd = sec + 30;
+}
+void Knop3(){
+  reset = true;
+  gameState = 0;
 }
 
 
