@@ -21,12 +21,9 @@ int theMode = 0;
 
 PFont font;
 
-
 import controlP5.*;
 
 ControlP5 cp;
-
-Movie myMovie;
 
 Button knop1;
 Button knop2;
@@ -35,31 +32,31 @@ Button knop3;
 void setup() {
   fullScreen();
   frameRate(5);
-  
-   font = createFont("Press Start 2P", 50);
-  
-   cp = new ControlP5(this);
+
+  font = createFont("Press Start 2P", 50);
+
+  cp = new ControlP5(this);
 
   knop1 = cp.addButton("Knop1").setPosition(colW + 1000, 400).setSize(200, 100).setCaptionLabel("Try Again!");
   knop1.hide();
   cp.getController("Knop1").setColorForeground(color(255, 0, 0));
-  
+
   knop2 = cp.addButton("Knop2").setPosition(colW + 850, 400).setSize(200, 100).setCaptionLabel("Play game!");
   cp.getController("Knop2").setColorForeground(color(255, 0, 0));
-  
+
   knop3 = cp.addButton("Knop3").setPosition(colW + 750, 400).setSize(200, 100).setCaptionLabel("Return To home Screen");
   knop3.hide();
   cp.getController("Knop3").setColorForeground(color(255, 0, 0));
+
 
   sec =  millis()/1000;
   startTijd = sec + 30;
 }
 // Game menu's switcher
-void draw() {  
-  
+void draw() {
+
   if (gameState == 0) {
-   MainMenu();
-    
+    MainMenu();
   } else if (gameState == 1) {
     if (reset) {
       GameSetup();
@@ -79,13 +76,13 @@ void keyPressed() {
 
 
 
-
+//tijd formule
 void timer() {
 
   sec =  millis()/1000;
   aftellen = startTijd - sec;
 
-fill(0);
+  fill(0);
   text("Seconde " + aftellen, 1250, 300);
 
   if (aftellen <= 0) {
@@ -93,8 +90,8 @@ fill(0);
   }
 }
 
-void knop2(){
-   reset = true;
+void knop2() {
+  reset = true;
   gameState = 1;
   startTijd = sec + 30;
 }

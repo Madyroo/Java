@@ -1,4 +1,3 @@
-import processing.video.*;
 PImage img;
 
 int GetAmountOfTiles(int type) {
@@ -18,7 +17,7 @@ void GameSetup() {
   frameRate(60);
   reset = false;
 
-
+//playing field
   int row = 0;
   colW = (width/50) / 2;
   maxAantal = colW * (height/50);
@@ -39,14 +38,15 @@ void GameSetup() {
 void Game() {
   background(255);
 
+//timer
   timer();
   MovePlayerTwo();
   MovePlayerOne();
   imageMode(BASELINE);
   img = loadImage("Tate.png");
-  
-//  formule vakkjes
-image(img, 1100, 500);
+
+  //  formule vakkjes
+  image(img, 1100, 500);
   strokeWeight(1);
   fill(255);
   int row = 0;
@@ -67,7 +67,7 @@ image(img, 1100, 500);
   line(1000, 180, 1750, 180);
   fill(0, 0, 0);
   textSize(50);
-  textAlign(BASELINE,BASELINE);
+  textAlign(BASELINE, BASELINE);
   textSize(20);
   text("player Rood: " + GetAmountOfTiles(1), 1000, 175);
   text("player Blauw: " + GetAmountOfTiles(2), 1400, 175);
@@ -92,9 +92,7 @@ void MovePlayerOne() {
 }
 
 void MovePlayerTwo() {
-
-    
-  }
+}
 
 
 void GameControl() {
